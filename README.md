@@ -152,3 +152,61 @@ ORDER BY s.attack DESC;
 | Charizard | 78 | 84 | 78 |
 | Charmeleon | 58 | 64 | 58 |
 | Charmander | 39 | 52 | 43 |
+
+
+## 🎓 Skills Demonstrated
+
+- Database design and normalization (1NF, 2NF, 3NF)
+- Writing complex SQL queries with multiple JOINs
+- Understanding relationships (one-to-one, one-to-many, many-to-many)
+- Data integrity constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK)
+- QA methodologies (exploratory testing, boundary testing, data validation)
+- Test case documentation and bug reporting
+- Problem-solving and analytical thinking
+
+## 📦 Getting Started
+
+### Prerequisites
+- PostgreSQL 16 or higher
+- PostgreSQL client (DBeaver, pgAdmin, or psql)
+
+### Installation
+
+1. Clone this repository
+```bash
+git clone https://github.com/MiguelEloii/pokedex-database.git
+```
+
+2. Create a new database
+```sql
+CREATE DATABASE pokedex;
+```
+
+3. Import the backup file
+   - **Using DBeaver:**
+     - Right-click on the `pokedex` database → SQL Editor → Open SQL Script
+     - Select `pokedex_backup.sql`
+     - Click Execute (▶️) or press Ctrl+Enter
+   - **Using psql (command line):**
+     ```bash
+     psql -U postgres -d pokedex -f pokedex_backup.sql
+     ```
+   - **Using pgAdmin:**
+     - Right-click on the `pokedex` database → Query Tool
+     - Open the `pokedex_backup.sql` file
+     - Execute the script
+     
+## 👤 About Me
+
+I'm Miguel, transitioning into Quality Assurance with a focus on backend testing, API testing, and test automation. This project demonstrates my SQL skills and QA mindset as I build hands-on experience in software quality assurance.
+
+**Connect with me:**
+- GitHub: [@MiguelEloii](https://github.com/MiguelEloii)
+
+## 📄 License
+
+This project is open source and available for educational purposes.
+
+---
+
+⭐ **If you found this project helpful or interesting, please consider giving it a star!**
