@@ -61,3 +61,90 @@ Applied exploratory and boundary testing methodologies to identify data integrit
 
 ### Sample Validation Queries
 ```sql
+-- Find records with too many types (should be max 2)
+SELECT pokemon_id, COUNT(*) 
+FROM pokemon_types 
+GROUP BY pokemon_id 
+HAVING COUNT(*) > 2;
+
+-- Find records with missing names
+SELECT * FROM pokemon WHERE name IS NULL;
+
+-- Find records with invalid stats (negative values)
+SELECT * FROM stats WHERE hp < 0 OR attack < 0;
+
+-- Find duplicate entries
+SELECT pokemon_id, type_id, COUNT(*) 
+FROM pokemon_types 
+GROUP BY pokemon_id, type_id 
+HAVING COUNT(*) > 1;
+```
+
+## 💡 Complex Query Examples
+
+### Show Pokémon with Their Types
+```sql
+SELECT 
+    p.name AS pokemon_name,
+    STRING_AGG(t.type_name, ', ' ORDER BY pt.slot) AS types
+FROM pokemon p
+JOIN pokemon_types pt ON p.id = pt.pokemon_id
+JOIN types t ON pt.type_id = t.id
+GROUP BY p.name
+ORDER BY p.name;
+```
+
+**Example Output:**
+| pokemon_name | types |
+|--------------|-------|
+| Bulbasaur | Grass, Poison |
+| Charizard | Fire, Flying |
+| Charmander | Fire |
+| Pidgey | Normal, Flying |
+
+---
+
+### Display Evolution Chains
+```sql
+SELECT 
+    p1.name AS evolves_from,
+    p2.name AS evolves_to,
+    e.evolution_level,
+    e.evolution_method
+FROM evolutions e
+JOIN pokemon p1 ON e.pokemon_id = p1.id
+JOIN pokemon p2 ON e.evolves_to_id = p2.id
+ORDER BY p1.name;
+```
+
+**Example Output:**
+| evolves_from | evolves_to | evolution_level | evolution_method |
+|--------------|------------|-----------------|------------------|
+| Bulbasaur | Ivysaur | 16 | level_up |
+| Charmander | Charmeleon | 16 | level_up |
+| Charmeleon | Charizard | 36 | level_up |
+| Ivysaur | Venusaur | 32 | level_up |
+
+---
+
+### Find All Fire-Type Pokémon with Stats
+```sql
+SELECT 
+    p.name AS pokemon_name,
+    s.hp,
+    s.attack,
+    s.defense
+FROM pokemon p
+JOIN pokemon_types pt ON p.id = pt.pokemon_id
+JOIN types t ON pt.type_id = t.id
+JOIN stats s ON p.id = s.pokemon_id
+WHERE t.type_name = 'Fire'
+ORDER BY s.attack DESC;
+```
+
+**Example Output:**
+| pokemon_name | hp | attack | defense |
+|--------------|-----|--------|---------|
+| Charizard | 78 | 84 | 78 |
+| Charmeleon | 58 | 64 | 58 |
+| Charmander | 39 | 52 | 43 |
