@@ -23,7 +23,7 @@ Built as part of my transition into Quality Assurance, this project showcases my
 
 Visual representation of the database structure and relationships:
 
-![Pokedex Database Schema](images/pokedex_schema_2.png)
+![Pokedex Database Schema](images/pokedex_schema.png)
 
 The database consists of 7 interconnected tables:
 
