@@ -44,18 +44,6 @@ The database consists of 7 interconnected tables:
 - **pokemon_types** - Handles Pokémon with dual types (e.g., Charizard: Fire + Flying)
 - **pokemon_abilities** - Connects Pokémon to their abilities, including hidden abilities
 
-## ✨ Key Features
-
-✅ **Proper Normalization** - Data is organized to minimize redundancy and maintain integrity
-
-✅ **Referential Integrity** - Foreign key constraints prevent orphaned records and invalid data
-
-✅ **Many-to-Many Relationships** - Junction tables properly handle complex relationships
-
-✅ **Data Validation** - Constraints ensure data quality (UNIQUE, NOT NULL, CHECK)
-
-✅ **Self-Referencing Tables** - Evolutions table references the pokemon table twice
-
 ##  QA Testing & Findings
 
 Applied exploratory and boundary testing methodologies to identify data integrity issues:
@@ -160,16 +148,6 @@ ORDER BY s.attack DESC;
 | Charmander | 39 | 52 | 43 |
 
 
-## 🎓 Skills Demonstrated
-
-- Database design and normalization (1NF, 2NF, 3NF)
-- Writing complex SQL queries with multiple JOINs
-- Understanding relationships (one-to-one, one-to-many, many-to-many)
-- Data integrity constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK)
-- QA methodologies (exploratory testing, boundary testing, data validation)
-- Test case documentation and bug reporting
-- Problem-solving and analytical thinking
-
 ## 📦 Getting Started
 
 ### Prerequisites
@@ -202,17 +180,20 @@ CREATE DATABASE pokedex;
      - Open the `pokedex_backup.sql` file
      - Execute the script
      
-## 👤 About Me
+## About Me
 
 I'm Miguel, transitioning into Quality Assurance with a focus on backend testing, API testing, and test automation. This project demonstrates my SQL skills and QA mindset as I build hands-on experience in software quality assurance.
 
 **Connect with me:**
 - GitHub: [@MiguelEloii](https://github.com/MiguelEloii)
 
-## 📄 License
+## License
 
 This project is open source and available for educational purposes.
 
+## Disclaimer
+
+Pokémon and Pokémon character names are trademarks of Nintendo. This project is a fan-made educational project and is not affiliated with or endorsed by Nintendo, Game Freak, or The Pokémon Company. All Pokémon data and sprites are used for educational purposes only.
 ---
 
 ⭐ **If you found this project helpful or interesting, please consider giving it a star!**
