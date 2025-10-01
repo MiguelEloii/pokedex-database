@@ -1,4 +1,4 @@
-# 🎮 Pokédex Database
+# Pokédex Database
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur" width="96"/>
@@ -8,24 +8,24 @@
 
 A normalized PostgreSQL database project demonstrating database design, SQL proficiency, and QA testing methodologies.
 
-## 📋 Project Overview
+## Project Overview
 
 Built as part of my transition into Quality Assurance, this project showcases my ability to design relational databases, write complex SQL queries, and apply QA thinking to identify data integrity issues.
 
-## 🎯 Purpose
+## Purpose
 
 - Learn database normalization principles
 - Practice writing complex SQL queries with JOINs
 - Apply QA methodologies (exploratory testing, boundary testing, data validation)
 - Build a portfolio piece demonstrating technical SQL skills
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Database:** PostgreSQL 16
 - **Tools:** DBeaver
 - **Language:** SQL
 
-## 📊 Database Schema
+## Database Schema
 
 Visual representation of the database structure and relationships:
 
@@ -56,7 +56,7 @@ The database consists of 7 interconnected tables:
 
 ✅ **Self-Referencing Tables** - Evolutions table references the pokemon table twice
 
-## 🧪 QA Testing & Findings
+##  QA Testing & Findings
 
 Applied exploratory and boundary testing methodologies to identify data integrity issues:
 
@@ -90,7 +90,7 @@ GROUP BY pokemon_id, type_id
 HAVING COUNT(*) > 1;
 ```
 
-## 💡 Complex Query Examples
+## Complex Query Examples
 
 ### Show Pokémon with Their Types
 ```sql
