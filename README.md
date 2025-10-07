@@ -182,7 +182,7 @@ CREATE DATABASE pokedex;
      
 ## About Me
 
-I'm Miguel, transitioning into Quality Assurance with a focus on backend testing, API testing, and test automation. This project demonstrates my SQL skills and QA mindset as I build hands-on experience in software quality assurance.
+I'm Miguel, transitioning into Quality Assurance with a focus on automation testing, API testing, and manual testing. This project demonstrates my SQL skills and QA mindset as I build hands-on experience in software quality assurance.
 
 **Connect with me:**
 - GitHub: [@MiguelEloii](https://github.com/MiguelEloii)
